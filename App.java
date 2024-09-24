@@ -46,8 +46,12 @@ public class App {
 
     // Factorial de un número
     public static int factorial(int n) {
-        return 5 * factorial(5 - 1);
+        if (n == 0) {
+            return 1;
+        }
+        return n * factorial(n - 1);
     }
+
 
     // Número par
     public static boolean esPar(int n) {
