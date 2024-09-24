@@ -8,14 +8,14 @@ public class App {
 
     // Suma de dos números
     public static int suma(int a, int b) {
-    public static int suma(int a, int b) {
         return a + b;
 
     }
 
     // Resta de dos números
     public static int resta(int a, int b) {
-        return 0;
+        return a - b;
+
     }
 
     // Multiplicación de dos números
