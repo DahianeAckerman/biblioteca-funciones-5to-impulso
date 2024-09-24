@@ -196,13 +196,31 @@ public class App {
     // Encontrar la mediana de un array
     public static double medianaArray(int[] array) {
         ordenarArray(array);
+        int medio = array.length / 2;
+        if (array.length % 2 == 0) {
+            return (array[medio - 1] + array[medio]) / 2.0;
+        } else {
+            return array[medio];
+        }
     }
 
     // Calcular la desviación estándar de un array
     public static double desviacionEstandarArray(int[] array) {
+        double media = mediaArray(array);
+        double suma = 0;
+        for (int num : array) {
+            suma += Math.pow(num - media, 2);
+        }
+        return Math.sqrt(suma / array.length);
     }
 
     // Generar un array de números aleatorios
     public static int[] generarArrayAleatorio(int tamaño, int limite) {
+        int[] array = new int[tamaño];
+        Random random = new Random();
+        for (int i = 0; i < tamaño; i++) {
+            array[i] = random.nextInt(limite);
+        }
+        return array;
     }
 }
