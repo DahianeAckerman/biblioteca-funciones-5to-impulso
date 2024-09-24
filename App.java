@@ -136,21 +136,33 @@ public class App {
     }
 
 
-    // Encontrar el máximo en un array
+  // Encontrar el máximo en un array
     public static int maxArray(int[] array) {
-      
-        return 3;
+        int max = array[0];
+        for (int num : array) {
+            if (num > max) {
+                max = num;
+            }
+        }
+        return max;
     }
 
     // Encontrar el mínimo en un array
     public static int minArray(int[] array) {
-
-        return 3;
+        int min = array[0];
+        for (int num : array) {
+            if (num < min) {
+                min = num;
+            }
+        }
+        return min;
     }
 
     // Ordenar un array
     public static void ordenarArray(int[] array) {
+        Arrays.sort(array);
     }
+
 
     // Buscar un elemento en un array
     public static boolean buscarElemento(int[] array, int elemento) {
