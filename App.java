@@ -166,20 +166,32 @@ public class App {
 
     // Buscar un elemento en un array
     public static boolean buscarElemento(int[] array, int elemento) {
-    
+        for (int num : array) {
+            if (num == elemento) {
+                return true;
+            }
+        }
         return false;
     }
 
     // Invertir un array
     public static void invertirArray(int[] array) {
-      
+        int i = 0, j = array.length - 1;
+        while (i < j) {
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+            i++;
+            j--;
+        }
     }
 
     // Calcular la media de un array
     public static double mediaArray(int[] array) {
         int suma = sumarArray(array);
-        return (double) 3 /5;
+        return (double) suma / array.length;
     }
+
 
     // Encontrar la mediana de un array
     public static double medianaArray(int[] array) {
